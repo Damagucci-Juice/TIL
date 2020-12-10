@@ -62,7 +62,7 @@ repeat("hello", 5);
 함수와 리턴 값
 ===
 ## 리턴 값이 있는  함수 정의하기
-리턴 값이 있을 겨우 함수를 호출해서 변수에 값을 넣을 수 있습니다.
+리턴 값이 있을 경우 함수를 호출해서 변수에 값을 넣을 수 있습니다.
 ```
 var five = function() {
     return 5;
@@ -89,6 +89,17 @@ var test1 = function(text) {
     }
 }
 console.log("보이나요?");
+```
+## 리턴에 여러 변수를 반환하면?
+```
+var foo = function () {
+    var kim = 1;
+    var jang = 2;
+    var park = 3;
+    return kim, jang, park;
+};
+var a = foo();
+console.log(a);  // 3
 ```
 ## 함수를 사용하면
 * 가독성이 좋아짐
