@@ -1,27 +1,4 @@
-# PhotoAlbum_7조
-
-## 구성원
-* 메이스
-* 다마구찌-주스
-
-## 협의 사항
-```
-<코어타임>
-[10:30~12:30]
-> 짝코딩
-
-[14:00~14:15]
-> 오후 스크럼(할일 목록회의)
-
-[14:20~16:00]
-> 짝코딩
-
-[16:00~17:00]
-> PR 작성
-
-[18:00 ~ 22:00]
-특이 사항시 모임, 그외 게더에서 모각코
-```
+# PhotoAlbum
 
 # Step1 주요 구현 사항
 ## 구현 모습
@@ -52,7 +29,7 @@ https://user-images.githubusercontent.com/50472122/159459533-12a22d96-ddce-4e7c-
 
 * `color.swift`
 
-```
+```swift
 struct Color {
     let red: Double
     let green: Double
@@ -64,7 +41,7 @@ struct Color {
 
 * `ColorRange.swift`
 
-```
+```swift
 enum ColorRange {
     static let lower = 0.0
     static let upper = 1.0
@@ -78,7 +55,7 @@ enum ColorRange {
 
 ### 팩토리: `ColorFactory` 팩토리를 이용해 UIColor 를 ViewController 에 전달
 
-```
+```swift
 struct ColorFactory {
     private static func generateRandom() -> UIColor {
         let red = Double.random(in: ColorRange.lower...ColorRange.upper)
@@ -108,7 +85,7 @@ struct ColorFactory {
 
 * ViewController.swift
 
-```
+```swift
 ...
     private let colors = ColorFactory.generateRandom(count: 40)
 ...
@@ -135,7 +112,7 @@ extension ViewController: UICollectionViewDataSource {
 
 * [Test] PhotoAlbumAppTests
 
-```
+```swift
 import XCTest
 @testable import PhotoAlbumApp
 
@@ -154,9 +131,3 @@ class PhotoAlbumAppTests: XCTestCase {
     }
 }
 ```
-
-# 소감
-
-* 메이스 : 
- 
-* 다마구찌-주스 : 좋은 짝을 만나서 많이 배우는 중이다. 생각하지 못한 부분을 메이스가 드라이빙을 해주거나 코딩하는 모습을 발견할 때마다 신기하다. 컨벤션이나 그런 것을 배워야겠다는 생각이 들었지만, 아마 실천을 미룰 것이다. 
